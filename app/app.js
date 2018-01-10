@@ -1,6 +1,8 @@
 // import Vue from 'vue'
 import routers from './router'
 
+Vue.prototype.$ajax = axios
+
 Vue.use(VueRouter);
 
 const routes = routers();
@@ -22,7 +24,15 @@ const app = new Vue({
 	},
 
 	methods:{
-	
+		com_Ajax(obj,success,error){
+			this.$ajax(obj).then(function(data){
+
+                success(data);
+            },function(data){
+				
+                error(data);
+            })
+		}
 	}
 
 

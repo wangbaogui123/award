@@ -83,7 +83,6 @@
 
 <script>
 
-    require('../css/home.css');
     import { Swipe, SwipeItem } from 'vue-swipe';
 
     Vue.component('swipe', Swipe);
